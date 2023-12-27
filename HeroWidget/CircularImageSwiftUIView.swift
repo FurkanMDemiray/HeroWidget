@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CircularImageSwiftUIView: View {
-    
-    var image : Image
+
+    var image: Image
     var body: some View {
         image.resizable()
             .aspectRatio(contentMode: .fit)

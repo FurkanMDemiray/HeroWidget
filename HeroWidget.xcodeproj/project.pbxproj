@@ -13,6 +13,7 @@
 		DD83355D2B3B9C2A00DBCC18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD83355C2B3B9C2A00DBCC18 /* Preview Assets.xcassets */; };
 		DD8335642B3B9D0000DBCC18 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335632B3B9D0000DBCC18 /* HeroModel.swift */; };
 		DD8335662B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335652B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift */; };
+		DDB59FE12B3CD1EC00CD78BD /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB59FE02B3CD1EC00CD78BD /* HeroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DD83355C2B3B9C2A00DBCC18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD8335632B3B9D0000DBCC18 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		DD8335652B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageSwiftUIView.swift; sourceTree = "<group>"; };
+		DDB59FE02B3CD1EC00CD78BD /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +61,9 @@
 				DD8335572B3B9C2900DBCC18 /* ContentView.swift */,
 				DD8335632B3B9D0000DBCC18 /* HeroModel.swift */,
 				DD8335592B3B9C2A00DBCC18 /* Assets.xcassets */,
-				DD83355B2B3B9C2A00DBCC18 /* Preview Content */,
 				DD8335652B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift */,
+				DDB59FE02B3CD1EC00CD78BD /* HeroView.swift */,
+				DD83355B2B3B9C2A00DBCC18 /* Preview Content */,
 			);
 			path = HeroWidget;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				DD8335562B3B9C2900DBCC18 /* HeroWidgetApp.swift in Sources */,
 				DD8335642B3B9D0000DBCC18 /* HeroModel.swift in Sources */,
 				DD8335662B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift in Sources */,
+				DDB59FE12B3CD1EC00CD78BD /* HeroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

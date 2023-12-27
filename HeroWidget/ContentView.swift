@@ -1,4 +1,4 @@
- //
+//
 //  ContentView.swift
 //  HeroWidget
 //
@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let heroes = [batman, wolwerine, deadpool]
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ForEach(heroes) { hero in HeroView(hero: hero)
+            }
         }
-        .padding()
     }
 }
 
