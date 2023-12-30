@@ -9,14 +9,20 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
+    var savedHero : HeroModel?
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), hero: batman)
+        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), hero: wolwerine)
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
         if let savedData = UserDefaults.standard.data(forKey: "hero"),
             let loadedPerson = try? JSONDecoder().decode(HeroModel.self, from: savedData) {
             let entry = SimpleEntry(date: Date(), configuration: configuration, hero: loadedPerson)
+            print(savedData)
+            return SimpleEntry(date: Date(), configuration: configuration, hero: loadedPerson)
+        } else {
+            // Veri yoksa varsayılan bir değer döndür
+            return SimpleEntry(date: Date(), configuration: configuration, hero: wolwerine)
         }
     }
 
@@ -27,8 +33,14 @@ struct Provider: AppIntentTimelineProvider {
         if let savedData = UserDefaults.standard.data(forKey: "hero"),
             let loadedPerson = try? JSONDecoder().decode(HeroModel.self, from: savedData) {
             let entry = SimpleEntry(date: Date(), configuration: configuration, hero: loadedPerson)
-            let timeLine = Timeline(entries: [entry], policy: .atEnd)
+            entries.append(entry)
+        } else {
+            // Veri yoksa varsayılan bir değerle timeline oluştur
+            let entry = SimpleEntry(date: Date(), configuration: configuration, hero: batman)
+            entries.append(entry)
         }
+        let timeline = Timeline(entries: entries, policy: .atEnd)
+        return timeline
     }
 }
 
@@ -42,13 +54,7 @@ struct WidgetHeroEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-        }
+        CircularImageSwiftUIView(image: Image(entry.hero.image))
     }
 }
 
@@ -80,6 +86,7 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     WidgetHero()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, configuration: .smiley, hero: wolwerine)
+    SimpleEntry(date: .now, configuration: .starEyes, hero: batman)
 }
+

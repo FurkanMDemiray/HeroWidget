@@ -26,8 +26,8 @@
 		DDB5A0012B3F4B3300CD78BD /* CircularImageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335652B3B9ED300DBCC18 /* CircularImageSwiftUIView.swift */; };
 		DDB5A0022B3F4B3600CD78BD /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335632B3B9D0000DBCC18 /* HeroModel.swift */; };
 		DDB5A0032B3F4B3900CD78BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335572B3B9C2900DBCC18 /* ContentView.swift */; };
-		DDB5A0042B3F4B3C00CD78BD /* HeroWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8335552B3B9C2900DBCC18 /* HeroWidgetApp.swift */; };
 		DDB5A0052B3F4C7500CD78BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8335592B3B9C2A00DBCC18 /* Assets.xcassets */; };
+		DDB5A0062B3F524300CD78BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD83355C2B3B9C2A00DBCC18 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB5A0052B3F4C7500CD78BD /* Assets.xcassets in Resources */,
+				DDB5A0062B3F524300CD78BD /* Preview Assets.xcassets in Resources */,
 				DDB59FF72B3F4A6700CD78BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB5A0042B3F4B3C00CD78BD /* HeroWidgetApp.swift in Sources */,
 				DDB59FF32B3F4A6500CD78BD /* WidgetHero.swift in Sources */,
 				DDB59FF52B3F4A6500CD78BD /* AppIntent.swift in Sources */,
 				DDB5A0032B3F4B3900CD78BD /* ContentView.swift in Sources */,
